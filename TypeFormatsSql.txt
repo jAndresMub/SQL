@@ -1,0 +1,10 @@
+# INTEGER: Entero
+# VARCHAR: texto, se debe especificar el tamaño VARCHAR(lengt) hasta 255
+# DOUBLE:  almacena los numeros y el numero de decimales 
+    DOUBLE(Cantidad de entetos, cantidad de decimales)
+# Float: hasta seis decimales
+# TINYINT(bytes): un entero pequeño
+# TEXT: Texto en general
+# ENUM('X', 'Y', 'Z'): es como una lista exclusiva, solo puede ingresar los valores
+    en los parentesis en este caso puede se X o Y o Z ningun otro.
+    

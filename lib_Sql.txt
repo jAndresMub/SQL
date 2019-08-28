@@ -1,0 +1,32 @@
+# CREATE DATABASE IF NOT EXIST "nombre de la BDD";
+# CREATE TABLE IF NOT EXIST "Nombre de la tabla"
+    Siempre crear un ID 
+    Se crea con "nombre del campo" INTEGER UNSIGNED PRIMARY AUTO_INCREMENT,
+# Las tablas en general se crean con el plural del sustantivo
+    por elemplo "Clientes"
+# Los campos van asi :"nombredelcampo" Tipo de variable y termina en ,
+    menos el ultimo campo, ese no termina en coma
+# NOT NULL: Sirve para catalogar los campos e impide que el campo sea nulo
+# DEFAULT: completa el campo con un valor si este fue nulo
+# COMMENT: pone un comentario a la columna, aunque este es invisible
+# SELECT * FROM "nombre de la tabla": Trae todo el contenido de la tabla seleccionada
+# SHOW WARNINGS: muestra los warnings despues de la ejecucion de un query
+# DROP TABLE "nombre de la tabla": OJO Borra la tabla directo, no hay forma de recuperarla
+# DECRIBE "nombre de la tabla": describe la estructura de la tabla. (Puede ser tambien DESC)
+# SHOW FULL COLUMNS FROM "nombre de la tabla": muestra en detalle los campos de la tabla.
+# UNIQUE: El valor de la columna tiene que tener un valor unico
+# DATETIME: Es un valor cualquiera, funciona para cumpleaños.
+# TIMESTAMP: segundos transcurridos desde el primero de enero de
+     1970 hasta hoy basado en el numero epoc funciona bien para hacer calculos
+     entre fechas, es un numero entero ambos son "yyyy-mm-dd hh:mm:ss".
+# Como buena practica, no se deben borrar registros de las tablas
+    se puede dejar una columna con un valor "boleano" para mostrar
+    si esta activa o no.
+# CURRENT_TIMESTAMP: Es una propiedad que se le puede poner a una columna
+    para que el default sea la fecha actual.
+    - CURRENT_TIMESTAM ON UPDATE CURRENT_TIMESTAMP: funciona para que en el
+      momento en que sea actualizado el valor se ponga la fecha actual
+
+# Cuando a un nombre de columna se le quiere poner el nombre de una 
+    palabra reservada se debe poner entre `` comillas invertidas
+    en este teclado se saca con altgr dos veces y la tecla de }
