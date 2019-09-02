@@ -1,3 +1,4 @@
+# Ingreso: mysql -u "usuario" -h "host" -p
 # CREATE DATABASE IF NOT EXIST "nombre de la BDD";
 # CREATE TABLE IF NOT EXIST "Nombre de la tabla"
     Siempre crear un ID 
@@ -30,3 +31,42 @@
 # Cuando a un nombre de columna se le quiere poner el nombre de una 
     palabra reservada se debe poner entre `` comillas invertidas
     en este teclado se saca con altgr dos veces y la tecla de }
+
+#INSERT INTO "Nombre de la tabla"("columna", "columna") VALUES ("valor", "valor");
+#INSERT INTO "Nombre de la tabla" VALUES ("valor", "valor"); (tienen que ir todas las columnas)
+    para el caso del incremental ID si se envia vacio, pero 
+    la columna esta nombrada se tiene que ir con NULL escrito dentro de VALUES
+#INSERT INTO "nombre de la tabla"("columnas") VALUES (valores)
+    ON DUPLICATE KEY UPDATE columna = "valor: Sirve para que si encuentra un valor duplicado en una llave
+    haga update en determinado valor del registro.
+
+    Se puede incluir un query dentro de un insert para traer un valor y que sea incluido dentro del registro
+
+    INSERT INTO tabla (volumnas) VALUES (valor,(select*from tabla where condicion),valor)
+
+
+
+#SELECT * FROM "Nombre de la tabla": trae todas las columnas y todos los valores de la tabla
+#SELECT * FROM "nom de la tabla" WHERE "nombre de la columna + condicion":
+    Trae todas las columnas y todos los valores que cumplan la condicion
+
+#SELECT "nombre de la columna" FROM "nom tabla": trae todos los valores unicamente de la columna
+    seleccionada
+    
+#SELECT "Nombre de la columna" FROM "nom tabla" WHERE "nombre de la columna + condicion":
+    trae todos los valores unicamente de la columna seleccionada y que cumplan la condicion
+
+#YEAR(Fecha): trae el año de una fecha
+#NOW(): trae la fecha actual
+#like: trae una similitud a la condicion entregada
+COUNT(columna) cuenta cuantos elementos hay en una columna
+COUNT(DISTINCT(columna)) cuenta los elementos diferentes en una columna
+AVG(columna) muestra el promedio de una columna (por ejemplo los precios)
+STDDEV(columna): Calcula la desviacion estandar
+CONCAT(columna, columna): concatena las columnas
+TO_DAYS(FECHA): Dias que han pasado desde el dia 0 de nuestra era hasta la fecha del parametro
+UPDATE tabla SET columnas Where Condiciones;
+TRUNCATE tabla; borra el contenido de la tabla dejando la estructura
+ALTER TABLE tabla ADD COLUMN nombrecolumna ATRIBUTOS
+
+mysqldump -u usuario -h host -p -d BASEDEDATOS > archivo.sql
